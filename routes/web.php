@@ -28,4 +28,5 @@ Route::group(['namespace'=>'Subscriptions'],function () {
 
   Route::get('plans',[PlanController::class,'index'])->name('subscriptions.plans');
     Route::get('/subscriptions',[SubscriptionController::class,'index'])->name('subscriptions');
+    Route::post('/subscriptions',[SubscriptionController::class,'store'])->name('subscriptions.store');
 });
