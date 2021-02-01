@@ -10,6 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
+    <script src="https://js.stripe.com/v3/"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
@@ -34,7 +35,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link text-blue-50" href="{{route('plans')}}">Plans</a>
+                <a class="nav-link text-blue-50" href="{{route('subscriptions.plans')}}">Plans</a>
             </li>
                     </ul>
 
@@ -83,5 +84,7 @@
             @yield('content')
         </main>
     </div>
+
+
 </body>
 </html>
